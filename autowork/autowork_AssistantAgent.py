@@ -1,7 +1,8 @@
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.conditions import TextMentionTermination
 from autogen_ext.models.openai import OpenAIChatCompletionClient
-from autowork_ModelClient import model_client
+
+from autowork.autowork_ModelClient import model_client
 
 
 

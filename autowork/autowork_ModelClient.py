@@ -29,4 +29,21 @@ def custom_model_client() -> OpenAIChatCompletionClient:
         },
     )
 
-model_client = get_model_client_ollama()
+def get_model_client_siliconflow() -> OpenAIChatCompletionClient:  # type: ignore
+    return OpenAIChatCompletionClient(
+        model="deepseek-ai/DeepSeek-V3",
+        #model="deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+        api_key="sk-uefrbugirppbfzegplcdszjgrfimuifcglivcqhuzzilokkv", #germany
+        base_url="https://api.siliconflow.cn/v1",
+        model_capabilities={
+            "json_output": False,
+            "vision": False,
+            "function_calling": True,
+        },
+    )
+
+
+
+# model_client = get_model_client_ollama()
+
+model_client = get_model_client_siliconflow()
